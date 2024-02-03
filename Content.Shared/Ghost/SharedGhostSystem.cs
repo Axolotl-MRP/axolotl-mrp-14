@@ -37,6 +37,8 @@ namespace Content.Shared.Ghost
                 return;
 
             component.TimeOfDeath = value;
+            // AXOLOTL: Mark dirty so the time is synced for ghostrespawn
+            Dirty(uid, component);
         }
 
         public void SetCanReturnToBody(EntityUid uid, bool value, GhostComponent? component = null)

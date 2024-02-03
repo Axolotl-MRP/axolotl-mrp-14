@@ -163,6 +163,9 @@ namespace Content.Server.Ghost
 
             var time = _gameTiming.CurTime;
             component.TimeOfDeath = time;
+
+            // AXOLOTL: Sync death time to client for ghost respawn
+            Dirty(uid, component);
         }
 
         private void OnGhostShutdown(EntityUid uid, GhostComponent component, ComponentShutdown args)

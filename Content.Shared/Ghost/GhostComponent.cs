@@ -41,7 +41,8 @@ public sealed partial class GhostComponent : Component
 
     // End actions
 
-    [ViewVariables(VVAccess.ReadWrite), DataField]
+    // AXOLOTL: add AutoNetworkedField for the client to know about the respawn time
+    [ViewVariables(VVAccess.ReadWrite), DataField, AutoNetworkedField]
     public TimeSpan TimeOfDeath = TimeSpan.Zero;
 
     [DataField("booRadius"), ViewVariables(VVAccess.ReadWrite)]
