@@ -14,16 +14,13 @@ FILE = "SS14.Client.zip"
 
 SERVER_FILES = [
     "SS14.Server_linux-x64.zip",
-    "SS14.Server_linux-arm64.zip",
-    "SS14.Server_win-x64.zip",
-    "SS14.Server_osx-x64.zip"
 ]
 
 VERSION = os.environ['GITHUB_SHA']
 FORK_ID = "wizards"
-BUILD_URL = f"https://cdn.centcomm.spacestation14.com/builds/wizards/builds/{{FORK_VERSION}}/{FILE}"
-MANIFEST_URL = f"https://cdn.centcomm.spacestation14.com/cdn/version/{{FORK_VERSION}}/manifest"
-MANIFEST_DOWNLOAD_URL = f"https://cdn.centcomm.spacestation14.com/cdn/version/{{FORK_VERSION}}/download"
+BUILD_URL = f"https://axolotl.yuniiworks.de/manifest/builds/{{FORK_VERSION}}/{FILE}"
+MANIFEST_URL = f"https://axolotl.yuniiworks.de/cdn/version/{{FORK_VERSION}}/manifest"
+MANIFEST_DOWNLOAD_URL = f"https://axolotl.yuniiworks.de/cdn/version/{{FORK_VERSION}}/download"
 
 def main() -> None:
     client_file = os.path.join("release", FILE)
