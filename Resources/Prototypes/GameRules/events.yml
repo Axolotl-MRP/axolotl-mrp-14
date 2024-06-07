@@ -221,6 +221,7 @@
     startAnnouncement: station-event-vent-creatures-start-announcement
     startAudio:
       path: /Audio/Announcements/attention.ogg
+    minimumPlayers: 10
     earliestStart: 15
     weight: 6
     duration: 50
