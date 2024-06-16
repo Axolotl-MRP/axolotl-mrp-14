@@ -34,6 +34,8 @@
       collection: Whistles
     Weh:
       collection: Weh
+    Blup:
+      collection: Blup
     Gasp:
       collection: MaleGasp
     DefaultDeathgasp:
@@ -74,6 +76,8 @@
       collection: Whistles
     Weh:
       collection: Weh
+    Blup:
+      collection: Blup
     Gasp:
       collection: FemaleGasp
     DefaultDeathgasp:
@@ -96,6 +100,8 @@
       collection: MaleCry
     Weh:
       collection: Weh
+    Blup:
+      collection: Blup
     Gasp:
       collection: MaleGasp
     DefaultDeathgasp:
@@ -118,6 +124,8 @@
       collection: FemaleCry
     Weh:
       collection: Weh
+    Blup:
+      collection: Blup
 
 - type: emoteSounds
   id: MaleSlime
@@ -154,6 +162,8 @@
       collection: Whistles
     Weh:
       collection: Weh
+    Blup:
+      collection: Blup
     Gasp:
       collection: MaleGasp
     DefaultDeathgasp:
@@ -196,6 +206,8 @@
       collection: Whistles
     Weh:
       collection: Weh
+    Blup:
+      collection: Blup
     Gasp:
       collection: FemaleGasp
     DefaultDeathgasp:
@@ -225,6 +237,8 @@
       collection: BikeHorn
     Weh:
       collection: Weh
+    Blup:
+      collection: Blup
     Gasp:
       collection: MaleGasp
     DefaultDeathgasp:
@@ -247,6 +261,8 @@
       path: /Audio/Voice/Arachnid/arachnid_click.ogg
     Weh:
       collection: Weh
+    Blup:
+      collection: Blup
     Gasp:
       collection: MaleGasp
     DefaultDeathgasp:
@@ -285,6 +301,8 @@
       collection: Whistles
     Weh:
       collection: Weh
+    Blup:
+      collection: Blup
     Gasp:
       collection: MaleGasp
     DefaultDeathgasp:
@@ -326,6 +344,8 @@
       collection: Whistles
     Weh:
       collection: Weh
+    Blup:
+      collection: Blup
     Gasp:
       collection: FemaleGasp
     DefaultDeathgasp:
@@ -351,6 +371,8 @@
       path: /Audio/Voice/Moth/moth_squeak.ogg
     Weh:
       collection: Weh
+    Blup:
+      collection: Blup
     Gasp:
       collection: MaleGasp
     DefaultDeathgasp:

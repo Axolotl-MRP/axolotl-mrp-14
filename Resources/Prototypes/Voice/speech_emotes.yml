@@ -406,6 +406,13 @@
   chatMessages: [Wehs!]
 
 - type: emote
+  id: Blup
+  name: chat-emote-name-blup
+  category: Vocal
+  icon: Interface/Emotes/weh.png
+  chatMessages: [Blups!]
+
+- type: emote
   id: Chirp
   name: chat-emote-name-chirp
   category: Vocal

@@ -349,3 +349,21 @@
         conditions:
         - !type:ReagentThreshold
           min: 50
+
+- type: reagent
+  id: JuiceThatMakesYouBlup
+  name: reagent-name-blup
+  group: Toxins
+  desc: reagent-desc-blup
+  physicalDesc: reagent-physical-desc-vibrant
+  flavor: blup
+  color: "#db6b9a"
+  metabolisms:
+    Poison:
+      metabolismRate: 0.25
+      effects:
+      - !type:Emote
+        emote: Blup
+        showInChat: true
+        force: true
+        probability: 0.5

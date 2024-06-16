@@ -79,3 +79,8 @@
   id: Weh
   files:
   - /Audio/Items/Toys/weh.ogg
+
+- type: soundCollection
+  id: Blup
+  files:
+  - /Audio/Items/Toys/blup.ogg
