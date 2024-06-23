@@ -1,13 +1,14 @@
 using Content.Server.GameTicking;
 using Content.Server.Mind;
+using Content.Shared._AXOLOTL;
 using Content.Shared.Administration;
 using Content.Shared.Ghost;
-using Content.Shared.CCVar;
+using Robust.Server.Player;
 using Robust.Shared.Configuration;
 using Robust.Shared.Console;
 using Robust.Shared.Timing;
 
-namespace Content.Client._AXOLOTL.RespawnButton;
+namespace Content.Server._AXOLOTL.RespawnButton;
 
 [AnyCommand]
 public sealed class GhostRespawnCommand : IConsoleCommand
@@ -15,6 +16,7 @@ public sealed class GhostRespawnCommand : IConsoleCommand
     [Dependency] private readonly IGameTiming _gameTiming = default!;
     [Dependency] private readonly IEntityManager _entityManager = default!;
     [Dependency] private readonly IConfigurationManager _configurationManager = default!;
+    [Dependency] private readonly IPlayerManager _playerManager = default!;
 
     public string Command => "ghostrespawn";
     public string Description => "Allows the player to return to the lobby if they've been dead long enough, allowing re-entering the round as another character.";
@@ -22,9 +24,15 @@ public sealed class GhostRespawnCommand : IConsoleCommand
 
     public void Execute(IConsoleShell shell, string argStr, string[] args)
     {
-        if (_configurationManager.GetCVar(CCVars.RespawnTime) == 0)
+        if (_configurationManager.GetCVar(AxolotlCVars.RespawnTime) == 0)
         {
             shell.WriteLine("Respawning is disabled, ask an admin to respawn you.");
+            return;
+        }
+
+        if (_playerManager.PlayerCount > _configurationManager.GetCVar(AxolotlCVars.MaxPlayersForRespawnButton))
+        {
+            shell.WriteLine("Too many players online to be automatically respawn.");
             return;
         }
 
@@ -53,7 +61,7 @@ public sealed class GhostRespawnCommand : IConsoleCommand
             return;
         }
         var time = (_gameTiming.CurTime - ghost.TimeOfDeath);
-        var respawnTime = _configurationManager.GetCVar(CCVars.RespawnTime);
+        var respawnTime = _configurationManager.GetCVar(AxolotlCVars.RespawnTime);
 
         if (respawnTime > time.TotalSeconds)
         {

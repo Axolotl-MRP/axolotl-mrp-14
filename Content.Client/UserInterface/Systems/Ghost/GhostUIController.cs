@@ -2,6 +2,7 @@ using Content.Client.Gameplay;
 using Content.Client.Ghost;
 using Content.Client.UserInterface.Systems.Gameplay;
 using Content.Client.UserInterface.Systems.Ghost.Widgets;
+using Content.Shared._AXOLOTL;
 using Content.Shared.Ghost;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controllers;
@@ -75,7 +76,7 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
         Gui.Visible = _system?.IsGhost ?? false;
         // AXOLOTL: Send death and respawn time information to client for ghostrespawn
         Gui.Update(_system?.AvailableGhostRoleCount, _system?.Player?.CanReturnToBody,
-                _system?.Player?.TimeOfDeath, _cfg.GetCVar(CCVars.RespawnTime));
+                _system?.Player?.TimeOfDeath, _cfg.GetCVar(AxolotlCVars.RespawnTime));
     }
 
     private void OnPlayerRemoved(GhostComponent component)
