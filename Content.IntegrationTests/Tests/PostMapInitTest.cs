@@ -64,8 +64,7 @@ namespace Content.IntegrationTests.Tests
             "Atlas",
             "Reach",
             "Train",
-            "Oasis",
-            "Xeno"
+            "Oasis"
         };
 
         /// <summary>
