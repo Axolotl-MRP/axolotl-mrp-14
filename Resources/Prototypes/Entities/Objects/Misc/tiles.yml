@@ -176,25 +176,6 @@
   - type: Stack
     stackType: FloorTileTechmaint
 
-<<<<<<< HEAD
-=======
-- type: entity
-  name: reinforced tile
-  parent: FloorTileItemBase
-  id: FloorTileItemReinforced
-  components:
-  - type: Sprite
-    state: reinforced
-  - type: Item
-    heldPrefix: reinforced
-  - type: FloorTile
-    outputs:
-      - Plating
-      - FloorReinforced
-  - type: Stack
-    stackType: FloorTileReinforced
-
->>>>>>> parent of bbb25b265d (Temporary Merge 16-06-24 Xeno map (#11))
 # TODO add a catwalk tile item once tile smoothing is supported
 
 - type: entity
@@ -1136,8 +1117,4 @@
     stackType: FloorTileWoodLarge
   - type: Construction
     graph: TileWoodLarge
-<<<<<<< HEAD
     node: woodtilelarge
-=======
-    node: woodtilelarge
->>>>>>> parent of bbb25b265d (Temporary Merge 16-06-24 Xeno map (#11))
