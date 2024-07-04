@@ -3,6 +3,12 @@
   name: job-name-captain
   description: job-description-captain
   playTimeTracker: JobCaptain
+  requirements:
+  - !type:DepartmentTimeRequirement
+    department: Command
+    time: 36000 #10 hrs
+  - !type:OverallPlaytimeRequirement
+    time: 72000 #20 hrs
   weight: 20
   startingGear: CaptainGear
   icon: "JobIconCaptain"

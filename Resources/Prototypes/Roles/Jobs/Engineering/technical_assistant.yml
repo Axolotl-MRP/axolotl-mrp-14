@@ -3,6 +3,9 @@
   name: job-name-technical-assistant
   description: job-description-technical-assistant
   playTimeTracker: JobTechnicalAssistant
+  requirements:
+  - !type:OverallPlaytimeRequirement
+    time: 3600 #1 hrs, often picked by raiders
   startingGear: TechnicalAssistantGear
   icon: "JobIconTechnicalAssistant"
   supervisors: job-supervisors-engineering

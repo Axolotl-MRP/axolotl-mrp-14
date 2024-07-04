@@ -3,6 +3,9 @@
   name: job-name-detective
   description: job-description-detective
   playTimeTracker: JobDetective
+  requirements:
+  - !type:OverallPlaytimeRequirement
+    time: 7200 #2 hrs
   startingGear: DetectiveGear
   icon: "JobIconDetective"
   supervisors: job-supervisors-hos

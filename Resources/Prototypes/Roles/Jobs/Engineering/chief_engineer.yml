@@ -3,6 +3,12 @@
   name: job-name-ce
   description: job-description-ce
   playTimeTracker: JobChiefEngineer
+  requirements:
+  - !type:DepartmentTimeRequirement
+    department: Engineering
+    time: 32400 #9 hrs
+  - !type:OverallPlaytimeRequirement
+    time: 36000 #10 hrs
   weight: 10
   startingGear: ChiefEngineerGear
   icon: "JobIconChiefEngineer"

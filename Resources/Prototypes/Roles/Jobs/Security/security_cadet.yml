@@ -3,6 +3,9 @@
   name: job-name-cadet
   description: job-description-cadet
   playTimeTracker: JobSecurityCadet
+  requirements:
+  - !type:OverallPlaytimeRequirement
+    time: 3600 #1 hrs
   startingGear: SecurityCadetGear
   icon: "JobIconSecurityCadet"
   supervisors: job-supervisors-security

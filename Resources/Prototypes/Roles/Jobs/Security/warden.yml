@@ -3,6 +3,9 @@
   name: job-name-warden
   description: job-description-warden
   playTimeTracker: JobWarden
+  requirements:
+  - !type:OverallPlaytimeRequirement
+    time: 18000 #5 hrs
   startingGear: WardenGear
   icon: "JobIconWarden"
   supervisors: job-supervisors-hos

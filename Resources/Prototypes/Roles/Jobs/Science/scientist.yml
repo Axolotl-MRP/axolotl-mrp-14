@@ -3,6 +3,9 @@
   name: job-name-scientist
   description: job-description-scientist
   playTimeTracker: JobScientist
+  requirements:
+  - !type:OverallPlaytimeRequirement
+    time: 3600 #1 hrs
   startingGear: ScientistGear
   icon: "JobIconScientist"
   supervisors: job-supervisors-rd

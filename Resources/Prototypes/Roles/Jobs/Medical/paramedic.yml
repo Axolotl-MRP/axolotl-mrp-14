@@ -3,6 +3,9 @@
   name: job-name-paramedic
   description: job-description-paramedic
   playTimeTracker: JobParamedic
+  requirements:
+  - !type:OverallPlaytimeRequirement
+    time: 3600 #1 hrs
   startingGear: ParamedicGear
   icon: "JobIconParamedic"
   supervisors: job-supervisors-cmo

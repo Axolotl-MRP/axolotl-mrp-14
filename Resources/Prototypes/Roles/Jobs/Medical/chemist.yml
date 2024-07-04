@@ -3,6 +3,9 @@
   name: job-name-chemist
   description: job-description-chemist
   playTimeTracker: JobChemist
+  requirements:
+  - !type:OverallPlaytimeRequirement
+    time: 5400 #1.5 hrs
   startingGear: ChemistGear
   icon: "JobIconChemist"
   supervisors: job-supervisors-cmo

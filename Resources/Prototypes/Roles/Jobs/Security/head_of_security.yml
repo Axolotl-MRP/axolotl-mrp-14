@@ -3,6 +3,12 @@
   name: job-name-hos
   description: job-description-hos
   playTimeTracker: JobHeadOfSecurity
+  requirements:
+  - !type:DepartmentTimeRequirement
+    department: Security
+    time: 32400 #9 hrs
+  - !type:OverallPlaytimeRequirement
+    time: 36000 #10 hrs
   weight: 10
   startingGear: HoSGear
   icon: "JobIconHeadOfSecurity"

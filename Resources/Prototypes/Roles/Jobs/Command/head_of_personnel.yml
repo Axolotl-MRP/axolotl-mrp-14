@@ -3,6 +3,9 @@
   name: job-name-hop
   description: job-description-hop
   playTimeTracker: JobHeadOfPersonnel
+  requirements:
+  - !type:OverallPlaytimeRequirement
+    time: 36000 #10 hrs
   weight: 20
   startingGear: HoPGear
   icon: "JobIconHeadOfPersonnel"

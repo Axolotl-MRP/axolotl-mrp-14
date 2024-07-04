@@ -3,6 +3,12 @@
   name: job-name-qm
   description: job-description-qm
   playTimeTracker: JobQuartermaster
+  requirements:
+  - !type:DepartmentTimeRequirement
+    department: Cargo
+    time: 18000 #5 hrs
+  - !type:OverallPlaytimeRequirement
+    time: 36000 #10 hrs
   weight: 10
   startingGear: QuartermasterGear
   icon: "JobIconQuarterMaster"
