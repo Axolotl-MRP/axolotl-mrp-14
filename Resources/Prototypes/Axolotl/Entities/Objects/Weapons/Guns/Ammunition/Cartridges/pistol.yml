@@ -1,0 +1,24 @@
+- type: entity
+  id: CartridgePistolBlup
+  name: cartridge (.35 auto blup)
+  parent: BaseCartridgePistol
+  components:
+  - type: CartridgeAmmo
+    proto: BulletPistolBlup
+  -  type: Sprite
+     layers:
+       - state: base
+         map: [ "enum.AmmoVisualLayers.Base" ]
+       - state: tip
+         map: [ "enum.AmmoVisualLayers.Tip" ]
+         color: "#fc74a2"
+  - type: ChemicalAmmo
+  - type: SolutionContainerManager
+    solutions:
+      ammo:
+        reagents:
+        - ReagentId: JuiceThatMakesYouBlup
+          Quantity: 2
+  - type: SolutionTransfer
+    maxTransferAmount: 2
+

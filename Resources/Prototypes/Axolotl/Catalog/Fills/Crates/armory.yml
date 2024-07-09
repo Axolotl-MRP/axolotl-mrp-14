@@ -1,0 +1,15 @@
+- type: entity
+  id: CrateArmoryBlup
+  parent: CrateWeaponSecure
+  name: blup rounds crate
+  description: Contains four pistol magazines and two boxes loaded with rounds infused with blup, guaranteed to make your enemies question what your doing. Requires Armory access to open. Blup!
+  components:
+  - type: StorageFill
+    contents:
+    - id: MagazineBoxPistolBlup
+      amount: 2
+    - id: MagazinePistolBlup
+      amount: 4
+  - type: Sprite
+    sprite: Structures/Storage/Crates/weapon.rsi
+    color: "#fc74a2"

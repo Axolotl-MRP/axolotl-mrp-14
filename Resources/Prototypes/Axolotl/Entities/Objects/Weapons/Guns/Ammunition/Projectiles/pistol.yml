@@ -1,0 +1,10 @@
+- type: entity
+  id: BulletPistolBlup
+  name: bullet (.35 auto blup)
+  parent: BaseBulletBlup
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 0.5

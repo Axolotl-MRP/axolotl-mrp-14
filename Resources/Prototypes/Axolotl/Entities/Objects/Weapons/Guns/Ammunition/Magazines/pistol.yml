@@ -1,0 +1,15 @@
+- type: entity
+  id: MagazinePistolBlup
+  name: pistol magazine (.35 auto blup)
+  parent: MagazinePistol
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgePistolBlup
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Magazine/Pistol/pistol_mag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+      color: "#fc74a2"
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
