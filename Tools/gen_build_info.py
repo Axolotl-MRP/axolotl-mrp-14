@@ -17,7 +17,7 @@ SERVER_FILES = [
 ]
 
 VERSION = os.environ['GITHUB_SHA']
-FORK_ID = "wizards"
+FORK_ID = "axolotl"
 BUILD_URL = f"https://axolotl.yuniiworks.de/manifest/builds/{{FORK_VERSION}}/{FILE}"
 MANIFEST_URL = f"https://axolotl.yuniiworks.de/cdn/version/{{FORK_VERSION}}/manifest"
 MANIFEST_DOWNLOAD_URL = f"https://axolotl.yuniiworks.de/cdn/version/{{FORK_VERSION}}/download"
