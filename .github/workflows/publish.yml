@@ -44,25 +44,24 @@ jobs:
     - name: Update Build Info
       run: Tools/gen_build_info.py
 
-    - name: Shuffle files around
-      run: |
-        mkdir "release/${{ github.sha }}"
-        mv release/*.zip "release/${{ github.sha }}"
-
-    - name: Upload files to axolotl
-      uses: appleboy/scp-action@master
+    - name: Upload build artifact
+      id: artifact-upload-step
+      uses: actions/upload-artifact@v4
       with:
-        host: axolotl.yuniiworks.de
-        username: builds-the-server
-        key: ${{ secrets.PUSH }}
-        source: "release/${{ github.sha }}"
-        target: "/home/builds-the-server/cdn/builds/"
-        strip_components: 1
+        name: build
+        path: release/*.zip
+        compression-level: 0
+        retention-days: 0
 
-    - name: Update manifest JSON
-      uses: appleboy/ssh-action@master
+    - name: Publish version
+      run: Tools/publish_github_artifact.py
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        PUBLISH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
+        ARTIFACT_ID: ${{ steps.artifact-upload-step.outputs.artifact-id }}
+        GITHUB_REPOSITORY: ${{ vars.GITHUB_REPOSITORY }}
+
+    - uses: geekyeggo/delete-artifact@v5
+      if: always()
       with:
-        host: axolotl.yuniiworks.de
-        username: builds-the-server
-        key: ${{ secrets.PUSH }}
-        script: /home/builds-the-server/push.ps1 ${{ github.sha }}
+        name: build
