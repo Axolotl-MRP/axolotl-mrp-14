@@ -11,11 +11,13 @@
   supervisors: job-supervisors-hos
   canBeAntag: false
   access:
-    - Security
-    - Brig
-    - Maintenance
-    - Service
-    - Detective
+  - Security
+  - Brig
+  - Maintenance
+  - Service
+  - Detective
+  - Cryogenics
+  - External
   special:
     - !type:AddImplantSpecial
       implants: [MindShieldImplant]
