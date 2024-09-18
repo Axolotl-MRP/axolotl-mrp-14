@@ -148,11 +148,15 @@ namespace Content.Server.RoundEnd
 
         public void RequestRoundEnd(TimeSpan countdownTime, EntityUid? requester = null, bool checkCooldown = true, string text = "round-end-system-shuttle-called-announcement", string name = "Station")
         {
-            if (_gameTicker.RunLevel != GameRunLevel.InRound) return;
+            if (_gameTicker.RunLevel != GameRunLevel.InRound)
+                return;
 
-            if (checkCooldown && _cooldownTokenSource != null) return;
+            if (checkCooldown && _cooldownTokenSource != null)
+                return;
 
-            if (_countdownTokenSource != null) return;
+            if (_countdownTokenSource != null)
+                return;
+
             _countdownTokenSource = new();
 
             if (requester != null)
@@ -191,7 +195,9 @@ namespace Content.Server.RoundEnd
 
             LastCountdownStart = _gameTiming.CurTime;
             ExpectedCountdownEnd = _gameTiming.CurTime + countdownTime;
-            Timer.Spawn(countdownTime, _shuttle.CallEmergencyShuttle, _countdownTokenSource.Token);
+
+            // TODO full game saves
+            Timer.Spawn(countdownTime, _shuttle.DockEmergencyShuttle, _countdownTokenSource.Token);
 
             ActivateCooldown();
             RaiseLocalEvent(RoundEndSystemChangedEvent.Default);
