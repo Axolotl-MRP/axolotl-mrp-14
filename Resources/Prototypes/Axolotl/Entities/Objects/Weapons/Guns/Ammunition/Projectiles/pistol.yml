@@ -2,7 +2,7 @@
   id: BulletPistolBlup
   name: bullet (.35 auto blup)
   parent: BaseBulletBlup
-  noSpawn: true
+  categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
     damage:

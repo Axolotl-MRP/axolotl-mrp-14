@@ -2,7 +2,7 @@
   id: BaseBulletBlup
   name: base bullet blup
   parent: BaseBullet
-  noSpawn: true
+  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
