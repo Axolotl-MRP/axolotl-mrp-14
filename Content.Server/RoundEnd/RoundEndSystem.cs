@@ -128,7 +128,7 @@ namespace Content.Server.RoundEnd
             return _countdownTokenSource != null;
         }
 
-        public void RequestRoundEnd(EntityUid? requester = null, bool checkCooldown = true, string text = "round-end-system-shuttle-called-announcement", string name = "Station")
+        public void RequestRoundEnd(EntityUid? requester = null, bool checkCooldown = true, string text = "round-end-system-shuttle-called-announcement", string name = "round-end-system-shuttle-sender-announcement")
         {
             var duration = DefaultCountdownDuration;
 
@@ -146,7 +146,7 @@ namespace Content.Server.RoundEnd
             RequestRoundEnd(duration, requester, checkCooldown, text, name);
         }
 
-        public void RequestRoundEnd(TimeSpan countdownTime, EntityUid? requester = null, bool checkCooldown = true, string text = "round-end-system-shuttle-called-announcement", string name = "Station")
+        public void RequestRoundEnd(TimeSpan countdownTime, EntityUid? requester = null, bool checkCooldown = true, string text = "round-end-system-shuttle-called-announcement", string name = "round-end-system-shuttle-sender-announcement")
         {
             if (_gameTicker.RunLevel != GameRunLevel.InRound)
                 return;
@@ -186,7 +186,7 @@ namespace Content.Server.RoundEnd
             _chatSystem.DispatchGlobalAnnouncement(Loc.GetString(text,
                 ("time", time),
                 ("units", Loc.GetString(units))),
-                name,
+                Loc.GetString(name),
                 false,
                 null,
                 Color.Gold);
